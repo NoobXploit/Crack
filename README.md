@@ -17,7 +17,7 @@ Also you can Create a File
 <p>👉pip2 install lolcat </p>
 <p>👉pip install bs4</p>
 <p>👉pkg install git -y </p>
-<p>👉 git clone https://github.com/NoobXploit/Crack-</p>
+<p>👉 git clone https://github.com/NoobXploit/Crack</p>
 <p>👉cd Crack</p>
 <p>👉ls </p>
 <p>👉python2 noob.py </p>
