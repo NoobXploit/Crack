@@ -640,7 +640,7 @@ def ___metode___():
                 uid, lower(Name) = user.split('<=>')
                 ox = Name.split(' ')
                 if ___password___ in ['1','01']:
-                    pwx = [Name, ox[0]+'123', ox[0]+'12345', ox[0]+'121', ox[0]+'1234']]
+                    pwx = [Name, ox[0]+'123', ox[0]+'12345', ox[0]+'121', ox[0]+'1234']
                 elif ___password___ in ['2','02']:
                     pwx = [Name, ox[0]+'123', ox[0]+'1234', ox[0]+'12345', ox[0]+'123456']
                 elif ___password___ in ['3','03']:
