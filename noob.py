@@ -380,9 +380,7 @@ def ___metode___():
         os.remove(___file___)
         exit("\n%s[%sDone%s]"%(B,H,B))
     elif ___metode___ in ['3','03']:
-        print("\n%s[%s1%s]%s Use Password [Name,Name123,Name12345]"%(H,P,H,P))
-        print("%s[%s2%s]%s Use Password [Name,Name123,Name1234,Name12345,Name123456]"%(H,P,H,P))
-        print("%s[%s3%s]%s Use Password [Name,Name123,Name1234,Name12345,NoobXploit,Dll]"%(H,P,H,P))
+        print("\n%s[%s1%s]%s Use Password [Auto Password]"%(H,P,H,P))  
         print("%s[%s4%s]%s Use Password Manual [ >6 ]"%(H,P,H,P))
         ___password___ = raw_input("\n%s[%s?%s]%s Choose :%s "%(B,H,B,P,K))
         if ___password___ in ['4','04']:
