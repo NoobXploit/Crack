@@ -538,12 +538,12 @@ def ___menu___():
         ___login___()
     try:
         xoz = requests.get('https://graph.facebook.com/me/?access_token=%s'%(___token___)).json()
-        print("%s[%sâ€¢%s]%s Welcome :%s %s"%(B,P,B,P,H,xoz['name']))
+        print("%s[%s🔥%s]%s Welcome :%s %s"%(B,P,B,P,H,xoz['name']))
         try:
             print("%s[%s*%s]%s Email :%s %s"%(B,P,B,P,H,xoz['email']))
         except:
-            print("%s[%s*%s]%s Email :%s email_is_none@gmail.com"%(B,P,B,P,H))
-        print("%s[%sâ€¢%s]%s User :%s %s"%(B,P,B,P,H,xoz['id']))
+            print("%s[%s🔥%s]%s Email :%s email_is_none@gmail.com"%(B,P,B,P,H))
+        print("%s[%s🔥%s]%s User :%s %s"%(B,P,B,P,H,xoz['id']))
     except (KeyError):
         print("%s[%s!%s]%s Token Invalid"%(P,M,P,M));sleep(2);os.system('rm - rf login.txt')
         ___login___()
