@@ -401,7 +401,7 @@ def ___metode___():
                 elif ___password___ in ['2','02']:
                     pwx = pwd
                 else:
-                    pwx = [Name'ox[0]+'123'+ox[0]+'12345']
+                    pwx = [Name,ox[0]+'123'+ox[0]+'12345']
                 hayuk.submit(mbasic, ids, uid, pwx)
         os.remove(___file___)
         exit("\n%s[%sDone%s]"%(B,H,P))
